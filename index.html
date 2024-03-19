@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to external CSS file for styling -->
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="job">
+          <h1>Job Application <span>(Web) </span></h1>
+          <!-- Combined title and subtitle -->
+        </div>
+        <div class="name">
+          <label for="name">First Name</label>
+          <input
+            type="text"
+            name="first_name"
+            id="name"
+            placeholder="Enter your First Name.."
+            required
+          />
+          <!-- Added name attribute for form submission -->
+        </div>
+        <div class="last">
+          <label for="last">Last Name</label>
+          <input
+            type="text"
+            name="last_name"
+            id="last"
+            placeholder="Enter Last Name.."
+            required
+          />
+          <!-- Added name attribute for form submission -->
+        </div>
+        <div class="email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="eg: abc123@gmail.com"
+            required
+          />
+          <!-- Added name attribute for form submission -->
+        </div>
+        <div class="role">
+          <label for="role">Job Role</label>
+          <select name="job_role" id="role">
+            <option value="select">Select Job Role</option>
+            <option value="Marketing Coordinator">Marketing Coordinator</option>
+            <option value="Web Designer">Web Designer</option>
+            <option value="Project Manager">Project Manager</option>
+          </select>
+        </div>
+        <div class="address">
+          <label for="add">Address</label>
+          <textarea
+            name="address"
+            id="add"
+            cols="30"
+            rows="4"
+            placeholder="Enter Address"
+            required
+          ></textarea>
+          <!-- Added name attribute for form submission -->
+        </div>
+        <div class="city">
+          <label for="city">City</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Enter City Name"
+            required
+          />
+          <!-- Added name attribute for form submission -->
+        </div>
+        <div class="pin">
+          <label for="pin">Pincode</label>
+          <input
+            type="number"
+            name="pincode"
+            id="pin"
+            placeholder="Enter Pincode Name.."
+            required
+          />
+          <!-- Added name attribute for form submission -->
+        </div>
+        <div class="date">
+          <label for="date">Date</label>
+          <input type="date" name="application_date" id="date" />
+          <!-- Added name attribute for form submission -->
+        </div>
+        <div class="upload">Upload Your CV</div>
+        <input type="file" name="cv" id="upload" />
+        <!-- Added name attribute for form submission -->
+
+        <div class="apply">
+          <button type="submit">Apply Now</button>
+          <!-- Added type attribute as submit for form submission -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.main {
+  background-color: rgb(204, 204, 204);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.job h1 {
+  font-size: 23px;
+}
+span {
+  font-size: 13px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 0.3px solid;
+}
+.job {
+  display: flex;
+  align-items: first baseline;
+}
+.name,
+.last,
+.email,
+.role,
+.address,
+.city,
+.pin,
+.date,
+.upload {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0px;
+  gap: 6px;
+}
+input::placeholder {
+  color: #111;
+}
+input,
+select{
+  padding: 4px;
+}
+
+textarea {
+  min-height: 40px;
+  max-height: 200px;
+  min-width: 290px;
+  max-width: 400px;
+}
+.apply {
+  display: flex;
+  justify-content: end;
+}
+.apply button {
+  background-color: rgb(255, 0, 51);
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 4px 6px;
+  border: none;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+  background-color: crimson;
+}
+input:focus {
+  border: 1px solid #ff0000;
+  box-shadow: 0 0 3px #dd0202;
+  outline-offset: 0px;
+  outline: none;
+}
