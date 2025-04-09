@@ -7,33 +7,89 @@ html,
 body {
   height: 100%;
   width: 100%;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+#darkModeToggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border: none;
+  background: #444;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
 .main {
-  background-color: rgb(204, 204, 204);
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
-.job h1 {
-  font-size: 23px;
-}
-span {
-  font-size: 13px;
-}
+
 .container {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  padding: 1.5rem;
-  border-radius: 20px;
-  border: 0.3px solid;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.job {
-  display: flex;
-  align-items: first baseline;
+body.dark .container {
+  background-color: #333;
+  border: 1px solid #555;
 }
+
+.job h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+span {
+  font-size: 14px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #007BFF;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
 .name,
 .last,
 .email,
@@ -43,44 +99,57 @@ span {
 .pin,
 .date,
 .upload {
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 6px 0px;
-  gap: 6px;
-}
-input::placeholder {
-  color: #111;
-}
-input,
-select{
-  padding: 4px;
 }
 
-textarea {
-  min-height: 40px;
-  max-height: 200px;
-  min-width: 290px;
-  max-width: 400px;
-}
 .apply {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .apply button {
-  background-color: rgb(255, 0, 51);
-  font-size: 16px;
-  border-radius: 5px;
-  padding: 4px 6px;
-  border: none;
+  background-color: #e60039;
   color: white;
-}
-button:hover {
+  font-size: 16px;
+  margin-top: 12px;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+}
+.apply button:hover {
   background-color: crimson;
 }
-input:focus {
-  border: 1px solid #ff0000;
-  box-shadow: 0 0 3px #dd0202;
-  outline-offset: 0px;
-  outline: none;
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
+
+.popup.show {
+  opacity: 1;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  #darkModeToggle {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
 }
